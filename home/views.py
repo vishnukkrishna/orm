@@ -7,7 +7,6 @@ from django.db import connection
 def home(request):
     # post = Book.objects.all()
     
-    
     post = Book.objects.raw("select * from home_Book")
     print(post)
     cursor = connection.cursor()
